@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSE HUOKAING THARA - Ghost Stories Contact / ទំនាក់ទំនងនិទានរឿងខ្មោចខ្មែរ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="universe_huokaingthara.jpg">
+</head>
+<body>
+
+    <!-- Holographic Scanline Overlay -->
+    <div id="holo-overlay"></div>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="logo-container">
+            <i class="fa-solid fa-envelope-open-text spin-icon"></i>
+            <h1>UNIVERSE HUOKAING THARA <span class="sub-title">ទំនាក់ទំនងរឿងខ្មោចខ្មែរ / Ghost Stories Contact</span></h1>
+        </div>
+        <div class="controls">
+            <button id="langToggleBtn" class="control-btn">🇰🇭 / EN</button>
+            <button id="themeToggleBtn" class="control-btn"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <div class="contact-layout">
+
+            <!-- Left Column: Story Submission & Inquiry Form -->
+            <section class="form-card">
+                <div class="badge">👻 STORY SUBMISSIONS & EDITORIAL DESK</div>
+                <h2 class="km">ផ្ញើរឿងនិទាន បទពិសោធន៍ផ្ទាល់ ឬសំណើទំនាក់ទំនង</h2>
+                <h2 class="en">Submit a Ghost Story, Real Experience or Inquiry</h2>
+                <p class="intro-text km">
+                    មានរឿងរ៉ាវអាថ៌កំបាំង រឿងព្រេងបុរាណ ឬបទពិសោធន៍ផ្ទាល់ដ៏រន្ធត់ព្រឺព្រួចចង់ចែករំលែកសម្រាប់កម្មវិធី <strong>និទានរឿងខ្មោចខ្មែរ</strong> របស់ <strong>UNIVERSE HUOKAING THARA</strong> មែនទេ? ផ្ញើមកកាន់ក្រុមការងាររបស់យើងឥឡូវនេះ។
+                </p>
+                <p class="intro-text en">
+                    Have a real-life eerie encounter, traditional Khmer legend, or collaboration message for <strong>Ghost Stories Khmer</strong> under <strong>UNIVERSE HUOKAING THARA</strong>? Send it to our team below.
+                </p>
+
+                <form id="ghostContactForm" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="senderName">
+                                <span class="km">ឈ្មោះរបស់អ្នក *</span>
+                                <span class="en">Your Name *</span>
+                            </label>
+                            <input type="text" id="senderName" required placeholder="e.g., Sokha / លាក់ឈ្មោះ (Anonymous)">
+                            <small class="error-msg"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="senderContact">
+                                <span class="km">លេខទូរស័ព្ទ / Telegram / Email *</span>
+                                <span class="en">Phone / Telegram / Email *</span>
+                            </label>
+                            <input type="text" id="senderContact" required placeholder="e.g., +855 12 345 678 or @handle">
+                            <small class="error-msg"></small>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="submissionType">
+                                <span class="km">ប្រភេទនៃការផ្ញើ</span>
+                                <span class="en">Submission Category</span>
+                            </label>
+                            <select id="submissionType">
+                                <option value="Real-Life Ghost Experience (បទពិសោធន៍ផ្ទាល់)">🕯️ Real-Life Ghost Experience (បទពិសោធន៍ផ្ទាល់)</option>
+                                <option value="Khmer Folklore & Legend (រឿងព្រេង និងជំនឿខ្មែរ)">📜 Khmer Folklore & Legend (រឿងព្រេងខ្មែរ)</option>
+                                <option value="Sponsor / Production Inquiry (សំណើសហការ / ឧបត្ថម្ភ)">🎬 Sponsor / Production Inquiry (សហការ / ឧបត្ថម្ភ)</option>
+                                <option value="General Feedback (មតិយោបល់ទូទៅ)">💬 General Feedback (មតិយោបល់)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="storyLocation">
+                                <span class="km">ទីតាំង / ខេត្ត (ប្រសិនបើមាន)</span>
+                                <span class="en">Location / Province (Optional)</span>
+                            </label>
+                            <input type="text" id="storyLocation" placeholder="e.g., Phnom Penh, Siem Reap, Kampot...">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storyTitle">
+                            <span class="km">ចំណងជើងរឿង ឬប្រធានបទ *</span>
+                            <span class="en">Story Title or Subject *</span>
+                        </label>
+                        <input type="text" id="storyTitle" required placeholder="e.g., សំឡេងហៅនៅផ្ទះចាស់ / The Midnight Knock">
+                        <small class="error-msg"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storyDetails">
+                            <span class="km">សាច់រឿងលម្អិត ឬសាររបស់អ្នក *</span>
+                            <span class="en">Story Details or Message *</span>
+                        </label>
+                        <textarea id="storyDetails" rows="5" required placeholder="រៀបរាប់ហេតុការណ៍ ពេលវេលា និងបទពិសោធន៍របស់អ្នក... / Share the sequence of events, time, and details..."></textarea>
+                        <small class="error-msg"></small>
+                    </div>
+
+                    <label class="checkbox-row">
+                        <input type="checkbox" id="permissionCheck" checked>
+                        <span class="km">ខ្ញុំយល់ព្រមឱ្យ <strong>UNIVERSE HUOKAING THARA</strong> ពិនិត្យ និងប្រើប្រាស់សាច់រឿងនេះសម្រាប់ការនិទាន។</span>
+                        <span class="en">I authorize <strong>UNIVERSE HUOKAING THARA</strong> to review and adapt this submission for storytelling.</span>
+                    </label>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span class="km">ផ្ញើរឿង និងសារទៅកាន់ក្រុមការងារ</span>
+                        <span class="en">Send Story & Message</span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Right Column: Editorial & Production Channels -->
+            <aside class="info-sidebar">
+                <div class="channel-card">
+                    <h3>
+                        <i class="fa-solid fa-tower-cell"></i>
+                        <span class="km">បណ្តាញទំនាក់ទំនងផ្លូវការ</span>
+                        <span class="en">Official Editorial Channels</span>
+                    </h3>
+
+                    <div class="channel-item">
+                        <span class="ch-label">PROGRAM & CONTRIBUTOR</span>
+                        <strong>និទានរឿងខ្មោចខ្មែរ • Mr. Chorn Rothanak</strong>
+                        <small>Supernatural folklore, eerie encounters & episode curation</small>
+                    </div>
+
+                    <div class="channel-item">
+                        <span class="ch-label">CYBERSECURITY & MARKETING LEAD</span>
+                        <strong>Mr. Huokaing Thara</strong>
+                        <small>Digital security, brand governance & media coordination</small>
+                    </div>
+
+                    <div class="channel-item">
+                        <span class="ch-label">PRODUCTION & OPERATIONS</span>
+                        <strong>Director Mr. Seng Chhat & Executive Board</strong>
+                        <small>UNIVERSE HUOKAING THARA Group (VPs Mr. Huo & Mr. B, 5 CEOs)</small>
+                    </div>
+                </div>
+
+                <div class="privacy-card">
+                    <i class="fa-solid fa-user-shield"></i>
+                    <div>
+                        <strong class="km">រក្សាការសម្ងាត់អត្តសញ្ញាណ</strong>
+                        <strong class="en">Identity & Privacy Protection</strong>
+                        <p class="km">អ្នកអាចស្នើសុំលាក់ឈ្មោះ (Anonymous) ប្រសិនបើមិនចង់បង្ហាញអត្តសញ្ញាណពិតនៅពេលនិទានរឿង។</p>
+                        <p class="en">You may request anonymity if you prefer your real identity not to be disclosed during narration.</p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- Submission Receipt Modal -->
+    <div id="receiptModal" class="modal-backdrop hidden">
+        <div class="modal-card">
+            <div class="modal-top">
+                <i class="fa-solid fa-circle-check"></i>
+                <h3 class="km">ទទួលបានរឿង និងសាររបស់អ្នកដោយជោគជ័យ!</h3>
+                <h3 class="en">Submission Received!</h3>
+            </div>
+            <div id="receiptDetails" class="modal-body"></div>
+            <button id="closeReceiptBtn" class="control-btn full-width">
+                <span class="km">បិទផ្ទាំង</span> / <span class="en">Close</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2026 UNIVERSE HUOKAING THARA Group. All Rights Reserved. / រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
